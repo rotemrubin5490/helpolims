@@ -1,5 +1,6 @@
 var express = require('express');
 var path = require('path');
+var dbHandler = require('../database/dal');
 var router = express.Router();
 
 router.get('/', function(req, res){
@@ -28,7 +29,7 @@ router.get('/profile', function(req, res){
 });
 
 router.get('/school reg', function(req, res){
-    res.sendFile(path.join(__dirname, '../views', 'school registration new.html'));
+    res.sendFile(path.join(__dirname, '../views','school registration new.html'));
 });
 
 router.get('/uploade photo', function(req, res){
